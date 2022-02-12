@@ -25,3 +25,10 @@ Compile `.rs` to `.wasm` using `wasm-pack` then build React app using `create-re
 - [wasm-bindgen documentation](https://rustwasm.github.io/docs/wasm-bindgen/)
 - [wasm-pack documentation](https://rustwasm.github.io/docs/wasm-pack/)
 - [wasm-pack-plugin documentation](https://github.com/wasm-tool/wasm-pack-plugin)
+
+## Battery Included
+
+- `console_error_panic_hook`: https://github.com/rustwasm/console_error_panic_hook
+  > This crate lets you debug panics on `wasm32-unknown-unknown` by providing a panic hook that forwards panic messages to `console.error`.
+- `wee_alloc`: https://github.com/rustwasm/wee_alloc
+  > This crate is focused on targeting `WebAssembly`, producing a small `.wasm` code size, and having a simple, correct implementation.
