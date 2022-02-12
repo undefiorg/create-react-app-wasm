@@ -1,3 +1,3 @@
 export function modLog(str: string) {
-  console.log(`${str} 👻`);
+  console.log(`${str} 👻`)
 }
