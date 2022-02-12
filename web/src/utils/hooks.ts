@@ -1,28 +1,25 @@
-import React from 'react';
+import React from 'react'
 
 export function useCrate() {
-  const [wasm, setWasm] = React.useState();
+  const [wasm, setWasm] = React.useState<any>()
 
   React.useEffect(() => {
-    (async () => {
-      const mod = await import('../crate');
-      setWasm(mod);
-    })();
-  }, []);
+    ;(async () => {
+      const mod = await import('../crate')
+      setWasm(mod)
+    })()
+  }, [])
 
-  return wasm;
+  return wasm
 }
 
-export function useTakeEffect(
-  fn: () => void | (() => void),
-  deps: React.DependencyList,
-) {
+export function useTakeEffect(fn: () => void | (() => void), deps: React.DependencyList) {
   React.useEffect(() => {
-    if (deps.some((d) => !d)) return;
-    const destructor = fn();
+    if (deps.some((d) => !d)) return
+    const destructor = fn()
     return () => {
-      destructor && destructor();
-    };
+      destructor && destructor()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, deps);
+  }, deps)
 }
